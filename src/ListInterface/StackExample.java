@@ -16,13 +16,15 @@ public class StackExample {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 	
-		while(choice < 4) {
+		while(choice < 5) {
 			
 			System.out.println("Select Operation to perform : ");
 			System.out.println("1 Push Element in stack");
 			System.out.println("2 Pop Eleemnt from stack");
 			System.out.println("3 Search Element from Stack");
-			System.out.println("4 Exit");
+			System.out.println("4 Print stack");
+			System.out.println("5 Exit");
+			System.out.println();
 			System.out.println("Enter your choice");
 			choice = Integer.parseInt(br.readLine());
 			switch(choice) {
@@ -33,6 +35,28 @@ public class StackExample {
 				s.push(element);
 				break;
 				
+			case 2 : 
+				System.out.println("Remove Element from stack : ");
+				s.pop();
+				break;
+				
+			case 3:
+				System.out.println("Search Element in stack : ");
+				element = Integer.parseInt(br.readLine());
+				s.search(element);
+				break;
+				
+			case 4:
+				System.out.println("Print stack");
+				for(Integer ss : s) {
+					System.out.println(ss);
+				}
+				
+				break;
+				
+			case 5:
+				System.out.println("Exit from stack");
+				break;
 				
 			default:
 				System.out.println("Wrong choice!");
